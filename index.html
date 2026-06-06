@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List Application</title>
+    <title>Voice-Controlled To-Do List</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>My To-Do List</h1>
-            <p class="subtitle">Stay organized and productive</p>
+            <h1>🎤 Voice-Controlled To-Do List</h1>
+            <p class="subtitle">Talk to manage your tasks</p>
         </header>
+
+        <div class="voice-control-section">
+            <button id="startVoiceBtn" class="voice-btn">
+                <span class="microphone-icon">🎤</span>
+                <span class="btn-text">Start Listening</span>
+            </button>
+            <button id="stopVoiceBtn" class="voice-btn stop-btn" style="display: none;">
+                <span class="microphone-icon">⏹️</span>
+                <span class="btn-text">Stop Listening</span>
+            </button>
+            <div id="voiceTranscript" class="voice-transcript"></div>
+        </div>
+
+        <div class="voice-commands">
+            <h3>Voice Commands:</h3>
+            <ul>
+                <li><strong>Add task:</strong> "Add task [task name]" or "Create [task name]"</li>
+                <li><strong>Complete task:</strong> "Complete [number]" or "Finish task [number]"</li>
+                <li><strong>Delete task:</strong> "Delete [number]" or "Remove task [number]"</li>
+                <li><strong>Filter tasks:</strong> "Show all", "Show active", "Show completed"</li>
+                <li><strong>Clear completed:</strong> "Clear completed" or "Delete all completed"</li>
+            </ul>
+        </div>
 
         <div class="input-section">
             <div class="input-wrapper">
